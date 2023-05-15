@@ -43,7 +43,7 @@ namespace Exo.WebApi.Controllers
         public IActionResult Atualizar(int id, Projeto projeto)
         {
             _projetoRepository.Atualizar(id, projeto);
-            return Status(204);
+            return StatusCode(204);
         }
 
         [HttpDelete("{id}")]
@@ -52,7 +52,7 @@ namespace Exo.WebApi.Controllers
             try
             {
                 _projetoRepository.Deletar(id);
-                return Status(204);
+                return StatusCode(204);
             }
             catch (Exception e)
             {
